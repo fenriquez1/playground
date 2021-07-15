@@ -1,4 +1,4 @@
 
-add_executable(run main.cpp)
+add_executable(twosum main.cpp)
 
-target_include_directories(run PRIVATE ../main/include)
+target_include_directories(twosum PRIVATE ../main/include)

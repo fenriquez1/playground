@@ -7,3 +7,4 @@ set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 set(CMAKE_CXX_FLAGS "-Wall -pedantic")
 
 add_subdirectory(twoSum)
+add_subdirectory(reverseInteger)
