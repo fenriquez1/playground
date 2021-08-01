@@ -8,3 +8,4 @@ set(CMAKE_CXX_FLAGS "-Wall -pedantic")
 
 add_subdirectory(twoSum)
 add_subdirectory(reverseInteger)
+add_subdirectory(addTwoNums)
