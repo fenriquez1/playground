@@ -21,33 +21,30 @@ int maxPathSum(TreeNode *root)
 {
     if (root == nullptr)
     {
-        std::cout << "nullptr" << std::endl;
         return 0;
     }
 
-    int maxSum = 0;
-    std::deque<TreeNode *> stack;
-    TreeNode *current = root;
+    static int maxSum = 0x80000000;
+    static TreeNode *current = root;
 
-    while (current != nullptr || !stack.empty())
+    int lSum = maxPathSum(root->left);
+    int rSum = maxPathSum(root->right);
+
+    int op1 = lSum + rSum + root->val;
+    int op2 = lSum + root->val;
+    int op3 = rSum + root->val;
+
+    if (op1 > maxSum)
     {
-        while (current != nullptr)
-        {
-            // visit node here for preorder
-            stack.push_back(current);
-            current = current->left;
-        }
-
-        current = stack.back();
-        stack.pop_back();
-
-        // visit the node here for inorder
-        std::cout << current->val << std::endl;
-
-        current = current->right;
+        maxSum = op1;
     }
 
-    return maxSum;
+    if (current->val == root->val)
+    {
+        return maxSum;
+    }
+
+    return std::max(op2, op3);
 }
 
 std::vector<TreeNode *> getNodes(int argc, char *argv[])
