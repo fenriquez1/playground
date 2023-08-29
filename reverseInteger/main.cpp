@@ -5,12 +5,12 @@
 
 int reverseInteger(int x)
 {
-    int result = 0;
-    int sign = 1;
+    auto result = 0;
+    auto sign = 1;
 
     try
     {
-        std::string xString = std::to_string(x);
+        auto xString = std::to_string(x);
 
         if (x < 0)
         {
