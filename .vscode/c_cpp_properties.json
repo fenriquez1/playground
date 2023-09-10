@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "/usr/include",
-                "${workspaceFolder}/main/include"
+                "${workspaceFolder}/main/include",
+                "${workspaceFolder}/*/include"
             ],
             "defines": [],
             "cStandard": "c23",
